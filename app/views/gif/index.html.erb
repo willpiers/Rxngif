@@ -1,0 +1,11 @@
+<h1>Pictures of Pandas</h1>
+
+<br>
+<a class="btn btn-small btn-primary" href="/pictures/new">Add an Image</a>
+<br><br>
+
+<ul>
+	<% @pics.each do |pic| %>
+	<li><a href="/pictures/<%= pic.id %>"><img src="<%= pic.url %>"></a></li>
+	<% end %>
+</ul>

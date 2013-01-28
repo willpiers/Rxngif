@@ -1,0 +1,17 @@
+<h1>Edit your image!</h1>
+
+<br><br><br>
+
+<form action="/pictures/<%= @pic_id %>" method="post">
+	<label for="URL">Image URL</label>
+	<input type="text" value="<%= @pic.url %>" name="url" id="URL">
+
+	<label for="Caption">Caption</label>
+	<textarea rows="3" autofocus name="caption" id="Caption"><%= @pic.caption %></textarea>
+
+	<input class="btn btn-primary" type="submit" name="submit" value="Submit">
+</form>
+
+<br><br>
+
+<a class="btn btn-inverse" href="/pictures">Back</a>
